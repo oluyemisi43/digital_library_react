@@ -1,4 +1,4 @@
-let token = "8ded423d9835b042d6ce2376219f14e4218f55ab339a2246"
+let token = "757f9cb3002ab8573a3443a5a1e5c3a96f6c162a59671fb2"
 
 export const server_calls = {
     get: async () =>{ 
@@ -45,7 +45,7 @@ export const server_calls = {
         });
     },
     delete: async(id:string) => {
-        const response = await fetch(`https://digital-library-i9g8.onrender.com/https://digital-library-i9g8.onrender.com/api/books/${id}`,{
+        const response = await fetch(`https://digital-library-i9g8.onrender.com/api/books/${id}`,{
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

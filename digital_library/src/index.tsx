@@ -11,7 +11,7 @@ import {
 }
 from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import logo from "./assets/img/mustang.jpg";
+import logo from "./assets/img/logo.jpeg";
 import { Home, Dashboard, Login } from './components';
 import { FirebaseAppProvider } from 'reactfire';
 import { firebaseConfig } from './firebaseConfig'
@@ -27,7 +27,7 @@ root.render(
 
    <Navbar.Brand href="/">
    <img
-  alt="Car Logo"
+  alt="Book Logo"
   src={logo}
   width="30"
   height="30"
@@ -56,9 +56,9 @@ root.render(
    </Navbar>
 
 <Routes>
-<Route path="/" element={<Home title="Car Inventory"/>} >
+<Route path="/" element={<Home title="digital library "/>} >
         </Route>
-        <Route path="/dashboard"element={<Dashboard title="Car Dashboard"/>} >
+        <Route path="/dashboard"element={<Dashboard title="Book Dashboard"/>} >
         </Route>
         <Route path="/account"element={<Login/>} >
         </Route>

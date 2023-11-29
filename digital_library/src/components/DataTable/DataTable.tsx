@@ -4,13 +4,13 @@ import { Button } from 'react-bootstrap';
 import { useGetData } from '../../custom-hooks';
 import { server_calls } from '../../api/server';
 import Modal from 'react-bootstrap/Modal';
-import { CarForm } from '../../components';
+import { BookForm } from '../../components';
 
 export const DataTable = () => {
 
-    let { carData, getData } = useGetData();
+    let { bookData, getData } = useGetData();
     
-    let cols = Object.keys(carData[0]|| {}).map(i => i); 
+    let cols = Object.keys(bookData[0]|| {}).map(i => i); 
     cols = [" "].concat(cols); //to leave empty column for radio button
 
     let [selectedrow, setSelectedRow] = useState("");
@@ -33,7 +33,7 @@ export const DataTable = () => {
     }
     return (
         <div>
-          <h2> Cars in Inventory </h2>
+          <h2> books in digital library </h2>
 
 <Table striped bordered hover>
     <thead>
@@ -44,7 +44,7 @@ export const DataTable = () => {
     </tr>
     </thead>
     <tbody>
-                    {carData.map((row: {id: string, make: string, model: string, name: string, price: number, year: string}) => {
+                    {bookData.map((row: {author: string, country: string, genre: string, hardcover_paperback: string, id: string, isbn: string,length:string,publish_year:string,publisher:string,title:string}) => {
                         return (
                         <tr>
                             <td>
@@ -52,21 +52,25 @@ export const DataTable = () => {
                                 <Button style={{ background: 'green' }} onClick={(e) => handleOpen(row)}>Update</Button>
                                 <Modal show={open} onHide={handleClose}>
                                     <Modal.Header>
-                                        <Modal.Title>Update Car</Modal.Title>
+                                        <Modal.Title>Update book</Modal.Title>
                                     </Modal.Header>
-                                    <Modal.Body> <CarForm id={selectedrow}/> </Modal.Body>
+                                    <Modal.Body> <BookForm id={selectedrow}/> </Modal.Body>
                                     <Modal.Footer>
                                         <button onClick={handleClose}>Cancel</button>
                                     </Modal.Footer>
                                 </Modal>
 
                             </td>
+                            <td>{row.author}</td>
+                            <td>{row.country}</td>
+                            <td>{row.genre}</td>
+                            <td>{row.hardcover_paperback}</td>
                             <td>{row.id}</td>
-                            <td>{row.make}</td>
-                            <td>{row.model}</td>
-                            <td>{row.name}</td>
-                            <td>{row.price}</td>
-                            <td>{row.year}</td>
+                            <td>{row.isbn}</td>
+                            <td>{row.length}</td>
+                            <td>{row.publish_year}</td>
+                            <td>{row.publisher}</td>
+                            <td>{row.title}</td>
                         </tr>
                     );
                 })}
