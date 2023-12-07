@@ -65,6 +65,36 @@ root.render(
 </Routes>
 
    </Router> 
+   <footer className="row" id="footer">
+
+   <div className="col-2 col-md-3">
+       <div className="footer-text-flex">
+           <h4>Site Links</h4>
+           <p>Why A Digital Library?</p>
+           <p>The Digital Library Project</p>
+           <p>Donate</p>
+           <p>Spread The Word</p>
+       </div>
+   </div>
+
+   <div className="col-2 col-md-3">
+       <div className="footer-text-flex">
+           <h4>Your Account</h4>
+           <p><a href="/account">Account</a></p>
+           <p>Login Inquiries</p>
+       </div>
+   </div>
+
+   <div className="col-2 col-md-3">
+       <div className="footer-text-flex">
+           <h4>Contact</h4>
+           <p>Address</p>
+           <p>Email</p>
+           <p>Contact Us</p>
+       </div>
+   </div>
+   </footer>
+
    </FirebaseAppProvider>
   </React.StrictMode>
 );

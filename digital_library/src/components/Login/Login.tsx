@@ -69,7 +69,19 @@ export const Login = () => {
                 <h2>Welcome {localStorage.getItem("name")}!</h2>
                 <Button onClick={sign_out}>Sign Out</Button>
             </div>
-        }     
+        }
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>     
         </div>
     )
 }

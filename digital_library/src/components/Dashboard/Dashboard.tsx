@@ -28,6 +28,10 @@ export const Dashboard = (props:any) => {
                     <button onClick={hideModal}>Cancel</button>
                 </Modal.Footer>
             </Modal>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>    
         </div>
     )
 }
